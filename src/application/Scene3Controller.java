@@ -19,6 +19,7 @@ import javafx.util.Duration;
 
 public class Scene3Controller implements Initializable {
 	//Inicializacion de variables a utilizar desde el archivo FXML
+	//Inicializacion de variables a utilizar desde el archivo FXML
 	@FXML
 	Parent root;
 	@FXML
