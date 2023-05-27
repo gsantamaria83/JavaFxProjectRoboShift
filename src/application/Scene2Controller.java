@@ -95,7 +95,7 @@ public class Scene2Controller implements Initializable {
 		return result;
 	}
 	
-	public void SwitchSceneLevel6(ActionEvent event)throws IOException{
+	public void SwitchScene(ActionEvent event)throws IOException{
 		String score = lblScore.getText();
 		String user = lblUser.getText();
 		loader = new FXMLLoader(getClass().getResource("Scene3.fxml"));
