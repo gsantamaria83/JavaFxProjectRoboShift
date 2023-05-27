@@ -5,10 +5,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneUserController">
    <children>
       <Label alignment="CENTER" layoutX="241.0" layoutY="211.0" text="Para iniciar ingresa tu nombre de usuario" />
-      <TextField layoutX="276.0" layoutY="244.0" style="-fx-background-color: grey;" />
-      <Button layoutX="316.0" layoutY="294.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Button" />
+      <TextField fx:id="txtUser" layoutX="276.0" layoutY="244.0" style="-fx-background-color: grey;" />
+      <Button layoutX="306.0" layoutY="294.0" mnemonicParsing="false" onAction="#SwitchScene" style="-fx-background-color: black;" text="Enviar Usuario" />
    </children>
 </AnchorPane>
