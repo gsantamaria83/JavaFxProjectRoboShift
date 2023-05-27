@@ -17,7 +17,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Scene6Controller implements Initializable {
+public class Scene7Controller implements Initializable {
 	//Inicializacion de variables a utilizar desde el archivo FXML
 	@FXML
 	Parent root;
@@ -89,12 +89,42 @@ public class Scene6Controller implements Initializable {
 			Scoring(-100);
 			return result;
 		}
-		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("Inicial"))|(!texto2.trim().equals("right") && lblPosicion.getText().equals("pfA"))| (!texto2.trim().equals("forward") && lblPosicion.getText().equals("pfB")) ) {
+		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("Inicial"))|(!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfA"))| (!texto2.trim().equals("left") && lblPosicion.getText().equals("pfB")) ) {
+			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+			Scoring(-100);
+			return result;
+		}
+		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfC"))|(!texto2.trim().equals("right") && lblPosicion.getText().equals("pfD"))| (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfE")) ) {
+			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+			Scoring(-100);
+			return result;
+		}
+		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfF"))|(!texto2.trim().equals("forward") && lblPosicion.getText().equals("pfG"))| (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfH")) ) {
+			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+			Scoring(-100);
+			return result;
+		}
+		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfI"))) {
 			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
 			Scoring(-100);
 			return result;
 		}
 		if((!texto3.trim().equals("pfA") && lblPosicion.getText().equals("Inicial")) | (!texto3.trim().equals("pfB") && lblPosicion.getText().equals("pfA")) | (!texto3.trim().equals("pfC") && lblPosicion.getText().equals("pfB")) ) {
+			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if((!texto3.trim().equals("pfC") && lblPosicion.getText().equals("pfB")) | (!texto3.trim().equals("pfD") && lblPosicion.getText().equals("pfC")) | (!texto3.trim().equals("pfE") && lblPosicion.getText().equals("pfD")) ) {
+			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if((!texto3.trim().equals("pfF") && lblPosicion.getText().equals("pfE")) | (!texto3.trim().equals("pfG") && lblPosicion.getText().equals("pfF")) | (!texto3.trim().equals("pfH") && lblPosicion.getText().equals("pfG")) ) {
+			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if((!texto3.trim().equals("pfI") && lblPosicion.getText().equals("pfH")) | (!texto3.trim().equals("pfJ") && lblPosicion.getText().equals("pfI"))) {
 			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
 			Scoring(-100);
 			return result;
@@ -109,12 +139,42 @@ public class Scene6Controller implements Initializable {
 			Scoring(-100);
 			return result;
 		}
-		if(lblPosicion.getText().equals("pfA") && !texto3.trim().equals("pfB")) {
+		if(lblPosicion.getText().equals("pfB") && !texto3.trim().equals("pfC")) {
 			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
 			Scoring(-100);
 			return result;
 		}
-		if(lblPosicion.getText().equals("pfB") && !texto3.trim().equals("pfC")) {
+		if(lblPosicion.getText().equals("pfC") && !texto3.trim().equals("pfD")) {
+			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if(lblPosicion.getText().equals("pfD") && !texto3.trim().equals("pfE")) {
+			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if(lblPosicion.getText().equals("pfE") && !texto3.trim().equals("pfF")) {
+			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if(lblPosicion.getText().equals("pfF") && !texto3.trim().equals("pfG")) {
+			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if(lblPosicion.getText().equals("pfG") && !texto3.trim().equals("pfH")) {
+			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if(lblPosicion.getText().equals("pfH") && !texto3.trim().equals("pfI")) {
+			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
+			Scoring(-100);
+			return result;
+		}
+		if(lblPosicion.getText().equals("pfI") && !texto3.trim().equals("pfJ")) {
 			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
 			Scoring(-100);
 			return result;
@@ -133,9 +193,9 @@ public class Scene6Controller implements Initializable {
 			String user = lblUser.getText();
 			loader = new FXMLLoader(getClass().getResource("Scene7.fxml"));
 			root = loader.load();
-			Scene7Controller scene7Controller = loader.getController();
-			scene7Controller.lblScore.setText(score);
-			scene7Controller.lblScore.setText(user);
+			Scene7Controller scene6Controller = loader.getController();
+			scene6Controller.lblScore.setText(score);
+			scene6Controller.lblScore.setText(user);
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
@@ -165,24 +225,58 @@ public class Scene6Controller implements Initializable {
 				lblMensaje.setText("Codigo ejecutado correctamente !!!");
 				if(lblPosicion.getText().equals("Inicial")) {
 					EstablecerNuevaPosicion("pfA");
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),130,"X",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),148,"Y",false);
 					Scoring(1000);
 				}
 				else if(lblPosicion.getText().equals("pfA")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),90,"Y",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);
 					EstablecerNuevaPosicion("pfB");
 					Scoring(1000);
 				}
 				else if(lblPosicion.getText().equals("pfB")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-130,"X",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"Y",false);
 					EstablecerNuevaPosicion("pfC");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfC")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);
+					EstablecerNuevaPosicion("pfD");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfD")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),70,"Y",false);
+					EstablecerNuevaPosicion("pfE");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfE")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),150,"X",false);
+					EstablecerNuevaPosicion("pfF");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfF")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),70,"Y",false);
+					EstablecerNuevaPosicion("pfG");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfG")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-160,"X",false);
+					EstablecerNuevaPosicion("pfH");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfH")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);
+					EstablecerNuevaPosicion("pfI");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfI")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),200,"X",false);
+					EstablecerNuevaPosicion("pfJ");
 					Scoring(1000);
 					btnContinuar.setDisable(false);
 				}
 				txtCodigo.setText("");
 				txtCodigo2.setText("");
 				txtCodigo3.setText("");
-				
 			}
 			
 		}
