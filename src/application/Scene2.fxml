@@ -29,8 +29,10 @@
       <Button fx:id="btnContinuar" layoutX="516.0" layoutY="355.0" mnemonicParsing="false" onAction="#SwitchScene" text="Continuar" />
       <TextField fx:id="txtCodigo2" layoutX="233.0" layoutY="272.0" prefHeight="25.0" prefWidth="69.0" />
       <TextField fx:id="txtCodigo3" layoutX="311.0" layoutY="272.0" prefHeight="25.0" prefWidth="69.0" />
-      <Label layoutX="405.0" layoutY="41.0" text="Score:" textFill="WHITE" />
-      <Label fx:id="lblScore" layoutX="444.0" layoutY="41.0" text="0" textFill="WHITE" />
+      <Label layoutX="402.0" layoutY="50.0" text="Score:" />
+      <Label fx:id="lblScore" layoutX="446.0" layoutY="50.0" text="0" />
+      <Label layoutX="155.0" layoutY="50.0" text="User:" />
+      <Label fx:id="lblUser" layoutX="190.0" layoutY="50.0" prefHeight="17.0" prefWidth="189.0" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

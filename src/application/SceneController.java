@@ -65,7 +65,7 @@ public class SceneController implements Initializable {
 	}
 	
 	public void IniciarJuego(ActionEvent event) throws IOException {
-		root = FXMLLoader.load(getClass().getResource("Scene2.fxml"));
+		root = FXMLLoader.load(getClass().getResource("SceneUser.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);

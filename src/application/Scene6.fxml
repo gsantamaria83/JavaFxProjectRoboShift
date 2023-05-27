@@ -35,5 +35,7 @@
       <Label layoutX="106.0" layoutY="207.0" text="pfC" />
       <Label layoutX="147.0" layoutY="42.0" text="Posición:" />
       <Label fx:id="lblPosicion" layoutX="198.0" layoutY="42.0" />
+      <Label layoutX="394.0" layoutY="69.0" text="User:" />
+      <Label fx:id="lblUser" layoutX="431.0" layoutY="69.0" text="Label" />
    </children>
 </AnchorPane>

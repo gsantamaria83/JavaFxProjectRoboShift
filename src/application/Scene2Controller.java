@@ -41,6 +41,8 @@ public class Scene2Controller implements Initializable {
 	Button btnContinuar;
 	@FXML
 	Label lblScore;
+	@FXML
+	Label lblUser;
 	
 	//Metodo de inicializacion del controlador para el archivo FXML
 	@Override
@@ -95,10 +97,12 @@ public class Scene2Controller implements Initializable {
 	
 	public void SwitchScene(ActionEvent event)throws IOException{
 		String score = lblScore.getText();
+		String user = lblUser.getText();
 		loader = new FXMLLoader(getClass().getResource("Scene3.fxml"));
 		root = loader.load();
 		Scene3Controller scene3Controller = loader.getController();
 		scene3Controller.lblScore.setText(score);
+		scene3Controller.lblUser.setText(user);
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);

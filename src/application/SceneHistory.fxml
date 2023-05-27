@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneHistoryController">
+   <children>
+      <Label layoutX="57.0" layoutY="45.0" prefHeight="28.0" prefWidth="82.0" text="Hola" textFill="#e4d5d5">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="57.0" layoutY="118.0" opacity="0.84" prefHeight="219.0" prefWidth="599.0" style="-fx-background-color: black;" text="Eres un programador que ha sido contratado por el gobierno para custodia, codificación, validación de&#10;patrones y visualización de sitio, con la utilización de un robot prototipo de primera generación GARF-1, &#10;para realizar las ejecuciones de código necesarias, para ingresar al robot, generar patrones de reconocimiento, &#10;y buscar salidas posteriores, bajo coordenadas prestablecidas y ejecutadas por el ente gubernamental que &#10;activó la contratación.&#10;Debes pasar por las posiciones dadas, revisar y validar los mejores caminos, que te lleven hacia otra salida &#10;independiente de la entrada inicial. &#10;Dentro de las coordenadas de posición dadas, no se validaron puntos de fuga, o salidas para enviar al robot &#10;directamente, así que secuencialmente, se debe trazar un patrón de recorrido. &#10;&#10;Un saludo, y que tengas un buen Código!!!" />
+      <Label fx:id="lblUser" layoutX="127.0" layoutY="45.0" prefHeight="28.0" prefWidth="528.0" text="Label" textFill="#e4d5d5">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="308.0" layoutY="424.0" mnemonicParsing="false" onAction="#SwitchScene" text="Comenzar" />
+   </children>
+</AnchorPane>
