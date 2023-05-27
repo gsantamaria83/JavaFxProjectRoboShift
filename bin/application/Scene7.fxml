@@ -16,47 +16,52 @@
          </image>
       </ImageView>
       <Line endX="-219.0" layoutX="450.0" layoutY="203.0" startX="-142.0" />
-      <Line endX="-91.5" endY="-102.0" layoutX="235.0" layoutY="318.0" startX="-91.0" startY="38.0" stroke="#d0c7c7" />
-      <TextField fx:id="txtCodigo" layoutX="211.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: GREY;" />
-      <Button layoutX="281.0" layoutY="490.0" mnemonicParsing="false" onAction="#ValidarCodigo" style="-fx-background-color: BLACK;" text="Enviar codigo" />
-      <Label fx:id="lblMensaje" layoutX="103.0" layoutY="535.0" prefHeight="17.0" prefWidth="479.0" textFill="#83161e" />
-      <Label layoutX="59.0" layoutY="41.0" text="LEVEL 6" />
-      <Label layoutX="163.0" layoutY="321.0" text="pfA" />
-      <Button fx:id="btnContinuar" layoutX="579.0" layoutY="505.0" mnemonicParsing="false" onAction="#SwitchScene" style="-fx-background-color: BLACK;" text="Continuar" />
-      <TextField fx:id="txtCodigo2" layoutX="289.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: GREY;" />
-      <TextField fx:id="txtCodigo3" layoutX="367.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: GREY;" />
-      <Label layoutX="520.0" layoutY="40.0" text="Score:" />
-      <Label fx:id="lblScore" layoutX="559.0" layoutY="41.0" text="0" />
-      <Line endX="-219.0" layoutX="418.0" layoutY="304.0" startX="-173.0" stroke="#d0c7c7" />
-      <Line endX="-91.0" endY="-105.0" layoutX="288.0" layoutY="321.0" startX="-91.0" startY="-17.0" stroke="#d0c7c7" />
+      <Line endX="-91.5" endY="-102.0" layoutX="235.0" layoutY="318.0" startX="-91.0" startY="38.0" stroke="#e4e4e4" />
+      <TextField fx:id="txtCodigo" layoutX="211.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
+      <Button layoutX="281.0" layoutY="490.0" mnemonicParsing="false" onAction="#ValidarCodigo" style="-fx-background-color: #BDBDBD;" text="Enviar codigo" textFill="WHITE" />
+      <Label fx:id="lblMensaje" layoutX="65.0" layoutY="545.0" prefHeight="17.0" prefWidth="590.0" textFill="#83161e" />
+      <Label layoutX="59.0" layoutY="41.0" text="LEVEL 6" textFill="WHITE" />
+      <Label layoutX="163.0" layoutY="321.0" text="pfA" textFill="WHITE" />
+      <Button fx:id="btnContinuar" layoutX="579.0" layoutY="505.0" mnemonicParsing="false" onAction="#SwitchScene" style="-fx-background-color: #BDBDBD;" text="Continuar" textFill="WHITE" />
+      <TextField fx:id="txtCodigo2" layoutX="289.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
+      <TextField fx:id="txtCodigo3" layoutX="367.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
+      <Label layoutX="520.0" layoutY="40.0" text="Score:" textFill="WHITE" />
+      <Label fx:id="lblScore" layoutX="559.0" layoutY="41.0" text="0" textFill="WHITE" />
+      <Line endX="-219.0" layoutX="418.0" layoutY="304.0" startX="-173.0" stroke="WHITE" />
+      <Line endX="-91.0" endY="-105.0" layoutX="288.0" layoutY="321.0" startX="-91.0" startY="-17.0" stroke="WHITE" />
       <Line endX="-219.0" layoutX="565.0" layoutY="253.0" startX="-142.0" />
-      <Line endX="-221.0" endY="14.0" layoutX="365.0" layoutY="341.0" startX="-69.0" startY="14.0" stroke="#d0c7c7" />
-      <Label layoutX="261.0" layoutY="321.0" text="pfB" />
-      <Label layoutX="261.0" layoutY="127.0" text="pfC" />
-      <Label layoutX="147.0" layoutY="42.0" text="Posición:" />
+      <Line endX="-221.0" endY="14.0" layoutX="365.0" layoutY="341.0" startX="-69.0" startY="14.0" stroke="WHITE" />
+      <Label layoutX="261.0" layoutY="321.0" text="pfB" textFill="WHITE" />
+      <Label layoutX="261.0" layoutY="127.0" text="pfC" textFill="WHITE" />
+      <Label layoutX="147.0" layoutY="42.0" text="Posición:" textFill="WHITE" />
       <Label fx:id="lblPosicion" layoutX="198.0" layoutY="42.0" />
-      <Label layoutX="344.0" layoutY="41.0" text="User:" />
-      <Label fx:id="lblUser" layoutX="381.0" layoutY="41.0" text="Label" />
-      <Line endX="-91.0" endY="-213.0" layoutX="336.0" layoutY="321.0" startX="-91.0" startY="-17.0" stroke="#d0c7c7" />
-      <Line endX="-91.0" endY="-210.0" layoutX="387.0" layoutY="372.0" startX="-91.0" startY="-17.0" stroke="#d0c7c7" />
-      <Line endX="-151.5" endY="-274.5" layoutX="397.0" layoutY="382.0" startX="-7.0" startY="-274.5" stroke="#d0c7c7" />
-      <Line endX="-219.0" layoutX="514.0" layoutY="161.0" startX="-173.0" stroke="#d0c7c7" />
-      <Line endX="-91.0" endY="-96.0" layoutX="433.0" layoutY="259.0" startX="-91.0" startY="-35.0" stroke="#d0c7c7" />
-      <Line endX="-91.0" endY="-105.0" layoutX="481.0" layoutY="212.0" startX="-91.0" startY="-36.0" stroke="#d0c7c7" />
-      <Line endX="-221.0" endY="14.0" layoutX="611.0" layoutY="164.0" startX="-69.0" startY="14.0" stroke="#d0c7c7" />
-      <Line endX="-221.0" endY="14.0" layoutX="563.0" layoutY="210.0" startX="-69.0" startY="14.0" stroke="#d0c7c7" />
-      <Label layoutX="356.0" layoutY="127.0" text="pfD" />
-      <Label layoutX="356.0" layoutY="193.0" text="pfE" />
+      <Label layoutX="344.0" layoutY="41.0" text="User:" textFill="WHITE" />
+      <Label fx:id="lblUser" layoutX="381.0" layoutY="41.0" text="Label" textFill="WHITE" />
+      <Line endX="-91.0" endY="-213.0" layoutX="336.0" layoutY="321.0" startX="-91.0" startY="-17.0" stroke="WHITE" />
+      <Line endX="-91.0" endY="-210.0" layoutX="387.0" layoutY="372.0" startX="-91.0" startY="-17.0" stroke="WHITE" />
+      <Line endX="-151.5" endY="-274.5" layoutX="397.0" layoutY="382.0" startX="-7.0" startY="-274.5" stroke="WHITE" />
+      <Line endX="-219.0" layoutX="514.0" layoutY="161.0" startX="-173.0" stroke="WHITE" />
+      <Line endX="-91.0" endY="-96.0" layoutX="433.0" layoutY="259.0" startX="-91.0" startY="-35.0" stroke="WHITE" />
+      <Line endX="-91.0" endY="-105.0" layoutX="481.0" layoutY="212.0" startX="-91.0" startY="-36.0" stroke="WHITE" />
+      <Line endX="-221.0" endY="14.0" layoutX="611.0" layoutY="164.0" startX="-69.0" startY="14.0" stroke="WHITE" />
+      <Line endX="-221.0" endY="14.0" layoutX="563.0" layoutY="210.0" startX="-69.0" startY="14.0" stroke="WHITE" />
+      <Label layoutX="356.0" layoutY="127.0" text="pfD" textFill="WHITE" />
+      <Label layoutX="356.0" layoutY="193.0" text="pfE" textFill="WHITE" />
       <Line endX="-91.0" endY="-105.0" layoutX="585.0" layoutY="329.0" startX="-91.0" startY="-81.0" stroke="#d0c7c7" />
-      <Line endX="-91.0" endY="-105.0" layoutX="633.0" layoutY="283.0" startX="-90.5" startY="14.5" stroke="#d0c7c7" />
-      <Label layoutX="511.0" layoutY="194.0" text="pfF" />
-      <Line endX="-221.0" endY="14.0" layoutX="563.0" layoutY="233.0" startX="-69.0" startY="14.0" stroke="#d0c7c7" />
-      <Line endX="-220.0" endY="14.0" layoutX="611.0" layoutY="284.0" startX="-69.0" startY="14.0" stroke="#d0c7c7" />
-      <Label layoutX="511.0" layoutY="260.0" text="pfG" />
+      <Line endX="-91.0" endY="-105.0" layoutX="633.0" layoutY="283.0" startX="-90.5" startY="14.5" stroke="WHITE" />
+      <Label layoutX="511.0" layoutY="194.0" text="pfF" textFill="WHITE" />
+      <Line endX="-221.0" endY="14.0" layoutX="563.0" layoutY="233.0" startX="-69.0" startY="14.0" stroke="WHITE" />
+      <Line endX="-220.0" endY="14.0" layoutX="611.0" layoutY="284.0" startX="-69.0" startY="14.0" stroke="WHITE" />
+      <Label layoutX="511.0" layoutY="260.0" text="pfG" textFill="WHITE" />
       <Line endX="-91.0" endY="-96.0" layoutX="433.0" layoutY="343.0" startX="-90.5" startY="7.0" stroke="#d0c7c7" />
-      <Line endX="-224.0" endY="14.0" layoutX="566.0" layoutY="336.0" startX="-23.0" startY="14.0" stroke="#d0c7c7" />
-      <Label layoutX="355.0" layoutY="260.0" text="pfH" />
-      <Label layoutX="357.0" layoutY="313.0" text="pfI" />
-      <Label layoutX="557.0" layoutY="313.0" text="pfJ" />
+      <Line endX="-224.0" endY="14.0" layoutX="566.0" layoutY="336.0" startX="-23.0" startY="14.0" stroke="WHITE" />
+      <Label layoutX="355.0" layoutY="260.0" text="pfH" textFill="WHITE" />
+      <Label layoutX="357.0" layoutY="313.0" text="pfI" textFill="WHITE" />
+      <Label layoutX="557.0" layoutY="313.0" text="pfJ" textFill="WHITE" />
+      <ImageView fitHeight="17.0" fitWidth="133.0" layoutX="293.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@RoboshiftLogo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

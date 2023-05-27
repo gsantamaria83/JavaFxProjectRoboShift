@@ -19,7 +19,7 @@
       <Line endX="-91.5" endY="-102.0" layoutX="235.0" layoutY="318.0" startX="-91.0" startY="38.0" stroke="#e4e4e4" />
       <TextField fx:id="txtCodigo" layoutX="211.0" layoutY="408.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
       <Button layoutX="281.0" layoutY="490.0" mnemonicParsing="false" onAction="#ValidarCodigo" style="-fx-background-color: #BDBDBD;" text="Enviar codigo" textFill="WHITE" />
-      <Label fx:id="lblMensaje" layoutX="103.0" layoutY="535.0" prefHeight="17.0" prefWidth="479.0" textFill="#83161e" />
+      <Label fx:id="lblMensaje" layoutX="65.0" layoutY="545.0" prefHeight="17.0" prefWidth="590.0" textFill="#83161e" />
       <Label layoutX="59.0" layoutY="41.0" text="LEVEL 6" textFill="WHITE" />
       <Label layoutX="163.0" layoutY="321.0" text="pfA" textFill="WHITE" />
       <Button fx:id="btnContinuar" layoutX="579.0" layoutY="505.0" mnemonicParsing="false" onAction="#SwitchScene" style="-fx-background-color: #BDBDBD;" text="Continuar" textFill="WHITE" />

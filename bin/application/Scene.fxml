@@ -12,7 +12,7 @@
             <Image url="@robot.png" />
          </image>
       </ImageView>
-      <Button layoutX="305.0" layoutY="388.0" mnemonicParsing="false" onAction="#IniciarJuego" style="-fx-background-color: black;" text="Iniciar Juego" />
+      <Button layoutX="305.0" layoutY="388.0" mnemonicParsing="false" onAction="#IniciarJuego" style="-fx-background-color: #FFF;" text="Iniciar Juego" />
       <ImageView fitHeight="100.0" fitWidth="400.0" layoutX="159.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@RoboshiftLogo.png" />
