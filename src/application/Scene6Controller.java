@@ -135,7 +135,7 @@ public class Scene6Controller implements Initializable {
 			root = loader.load();
 			Scene7Controller scene7Controller = loader.getController();
 			scene7Controller.lblScore.setText(score);
-			scene7Controller.lblScore.setText(user);
+			scene7Controller.lblUser.setText(user);
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);

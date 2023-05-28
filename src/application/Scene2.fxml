@@ -31,8 +31,8 @@
       <TextField fx:id="txtCodigo3" layoutX="396.0" layoutY="398.0" prefHeight="25.0" prefWidth="69.0" />
       <Label layoutX="520.0" layoutY="40.0" text="Score:" textFill="WHITE" />
       <Label fx:id="lblScore" layoutX="559.0" layoutY="41.0" text="0" textFill="WHITE" />
-      <Label layoutX="344.0" layoutY="41.0" text="User:" textFill="WHITE" />
-      <Label fx:id="lblUser" layoutX="313.0" layoutY="83.0" prefHeight="17.0" prefWidth="189.0" textFill="WHITE" />
+      <Label layoutX="265.0" layoutY="41.0" text="User:" textFill="WHITE" />
+      <Label fx:id="lblUser" layoutX="313.0" layoutY="41.0" prefHeight="17.0" prefWidth="189.0" textFill="WHITE" />
       <ImageView fitHeight="17.0" fitWidth="133.0" layoutX="293.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@RoboshiftLogo.png" />
