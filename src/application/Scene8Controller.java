@@ -191,11 +191,11 @@ public class Scene8Controller implements Initializable {
 		public void SwitchScene(ActionEvent event)throws IOException{
 			String score = lblScore.getText();
 			String user = lblUser.getText();
-			loader = new FXMLLoader(getClass().getResource("Scene7.fxml"));
+			loader = new FXMLLoader(getClass().getResource("Scene9.fxml"));
 			root = loader.load();
-			Scene8Controller scene6Controller = loader.getController();
-			scene6Controller.lblScore.setText(score);
-			scene6Controller.lblUser.setText(user);
+			Scene9Controller sceneController = loader.getController();
+			sceneController.lblScore.setText(score);
+			sceneController.lblUser.setText(user);
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
