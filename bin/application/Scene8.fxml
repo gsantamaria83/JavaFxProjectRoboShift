@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene8Controller">
+   <children>
+      <ImageView fx:id="myImage" fitHeight="53.0" fitWidth="30.0" layoutX="117.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@robot.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCodigo" layoutX="224.0" layoutY="411.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
+      <Button layoutX="294.0" layoutY="493.0" mnemonicParsing="false" onAction="#ValidarCodigo" style="-fx-background-color: #BDBDBD;" text="Enviar codigo" textFill="WHITE" />
+      <Label fx:id="lblMensaje" layoutX="65.0" layoutY="545.0" prefHeight="17.0" prefWidth="590.0" textFill="#83161e" />
+      <Label layoutX="59.0" layoutY="41.0" text="LEVEL 7" textFill="WHITE" />
+      <Button fx:id="btnContinuar" layoutX="579.0" layoutY="505.0" mnemonicParsing="false" onAction="#SwitchScene" style="-fx-background-color: #BDBDBD;" text="Continuar" textFill="WHITE" />
+      <TextField fx:id="txtCodigo2" layoutX="302.0" layoutY="411.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
+      <TextField fx:id="txtCodigo3" layoutX="380.0" layoutY="411.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #BDBDBD;" />
+      <Label layoutX="520.0" layoutY="40.0" text="Score:" textFill="WHITE" />
+      <Label fx:id="lblScore" layoutX="559.0" layoutY="41.0" text="0" textFill="WHITE" />
+      <Label layoutX="147.0" layoutY="42.0" text="Posición:" textFill="WHITE" />
+      <Label fx:id="lblPosicion" layoutX="198.0" layoutY="42.0" />
+      <Label layoutX="344.0" layoutY="41.0" text="User:" textFill="WHITE" />
+      <Label fx:id="lblUser" layoutX="381.0" layoutY="41.0" text="Label" textFill="WHITE" />
+      <ImageView fitHeight="17.0" fitWidth="133.0" layoutX="293.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@RoboshiftLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="349.0" fitWidth="354.0" layoutX="167.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LabyrinthLevel7.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="198.0" layoutY="224.0" text="pfA" />
+      <Label layoutX="198.0" layoutY="164.0" text="pfB" />
+      <Label layoutX="269.0" layoutY="224.0" text="pfC" />
+      <Label layoutX="269.0" layoutY="283.0" text="pfD" />
+      <Label layoutX="269.0" layoutY="164.0" text="pfE" />
+      <Label layoutX="342.0" layoutY="164.0" text="pfF" />
+      <Label layoutX="199.0" layoutY="335.0" text="pfG" />
+      <Label layoutX="341.0" layoutY="335.0" text="pfH" />
+      <Label layoutX="340.0" layoutY="233.0" text="pfI" />
+      <Label layoutX="415.0" layoutY="233.0" text="pfJ" />
+      <Label layoutX="415.0" layoutY="164.0" text="pfK" />
+      <Label layoutX="472.0" layoutY="164.0" text="pfL" />
+      <Label layoutX="415.0" layoutY="292.0" text="pfM" />
+      <Label layoutX="412.0" layoutY="344.0" text="pfN" />
+      <Label layoutX="479.0" layoutY="344.0" text="pfO" />
+      <Label layoutX="479.0" layoutY="292.0" text="pfP" />
+      <Label layoutX="479.0" layoutY="225.0" text="pfQ" />
+      <Label layoutX="542.0" layoutY="225.0" text="pfR" />
+   </children>
+</AnchorPane>
