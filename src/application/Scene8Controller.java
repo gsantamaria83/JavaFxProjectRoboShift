@@ -89,96 +89,65 @@ public class Scene8Controller implements Initializable {
 			Scoring(-100);
 			return result;
 		}
-		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("Inicial"))|(!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfA"))| (!texto2.trim().equals("left") && lblPosicion.getText().equals("pfB")) ) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("Inicial"))  ) {
+			result = "Error: Verifica la direccion del robot. 1" + texto2;
+			Scoring(-100);
+			return result;
+			
+		}
+		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfA"))) {
+			result = "Error: Verifica la direccion del robot." + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfC"))|(!texto2.trim().equals("right") && lblPosicion.getText().equals("pfD"))| (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfE")) ) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+		
+		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfG"))) {
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfF"))|(!texto2.trim().equals("forward") && lblPosicion.getText().equals("pfG"))| (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfH")) ) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+		
+		if( (!texto2.trim().equals("left") && lblPosicion.getText().equals("pfH"))) {
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
+		
+		
 		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfI"))) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if((!texto3.trim().equals("pfA") && lblPosicion.getText().equals("Inicial")) | (!texto3.trim().equals("pfB") && lblPosicion.getText().equals("pfA")) | (!texto3.trim().equals("pfC") && lblPosicion.getText().equals("pfB")) ) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+		
+		
+		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfJ"))) {
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if((!texto3.trim().equals("pfC") && lblPosicion.getText().equals("pfB")) | (!texto3.trim().equals("pfD") && lblPosicion.getText().equals("pfC")) | (!texto3.trim().equals("pfE") && lblPosicion.getText().equals("pfD")) ) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+		
+		
+		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfM"))) {
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if((!texto3.trim().equals("pfF") && lblPosicion.getText().equals("pfE")) | (!texto3.trim().equals("pfG") && lblPosicion.getText().equals("pfF")) | (!texto3.trim().equals("pfH") && lblPosicion.getText().equals("pfG")) ) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+		
+		if( (!texto2.trim().equals("left") && lblPosicion.getText().equals("pfP"))) {
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if((!texto3.trim().equals("pfI") && lblPosicion.getText().equals("pfH")) | (!texto3.trim().equals("pfJ") && lblPosicion.getText().equals("pfI"))) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
+		
+		
+		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfQ"))) {
+			result = "Error: Verifica la direccion del robot. " + texto2;
 			Scoring(-100);
 			return result;
 		}
-		if(lblPosicion.getText().equals("Inicial") && !texto3.trim().equals("pfA")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfA") && !texto3.trim().equals("pfB")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfB") && !texto3.trim().equals("pfC")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfC") && !texto3.trim().equals("pfD")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfD") && !texto3.trim().equals("pfE")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfE") && !texto3.trim().equals("pfF")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfF") && !texto3.trim().equals("pfG")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfG") && !texto3.trim().equals("pfH")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfH") && !texto3.trim().equals("pfI")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfI") && !texto3.trim().equals("pfJ")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
+		
+		
 		return result;
 	}
 	
@@ -191,15 +160,15 @@ public class Scene8Controller implements Initializable {
 		public void SwitchScene(ActionEvent event)throws IOException{
 			String score = lblScore.getText();
 			String user = lblUser.getText();
-			loader = new FXMLLoader(getClass().getResource("Scene7.fxml"));
+			loader = new FXMLLoader(getClass().getResource("Scene9.fxml"));
 			root = loader.load();
-			Scene8Controller scene6Controller = loader.getController();
-			scene6Controller.lblScore.setText(score);
-			scene6Controller.lblUser.setText(user);
+			Scene9Controller scene9Controller = loader.getController();
+			scene9Controller.lblScore.setText(score);
+			scene9Controller.lblUser.setText(user);
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
-			stage.show();
+			stage.show();	
 		}
 	
 	//Metodo general de validacion del codigo ejecutado por el usuario
@@ -225,55 +194,51 @@ public class Scene8Controller implements Initializable {
 				lblMensaje.setText("Codigo ejecutado correctamente !!!");
 				if(lblPosicion.getText().equals("Inicial")) {
 					EstablecerNuevaPosicion("pfA");
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),148,"Y",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),75,"X",false);
 					Scoring(1000);
 				}
 				else if(lblPosicion.getText().equals("pfA")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);
-					EstablecerNuevaPosicion("pfB");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfB")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"Y",false);
-					EstablecerNuevaPosicion("pfC");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfC")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);
-					EstablecerNuevaPosicion("pfD");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfD")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),70,"Y",false);
-					EstablecerNuevaPosicion("pfE");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfE")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),150,"X",false);
-					EstablecerNuevaPosicion("pfF");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfF")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),70,"Y",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),109,"y",false);
 					EstablecerNuevaPosicion("pfG");
 					Scoring(1000);
 				}
 				else if(lblPosicion.getText().equals("pfG")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-160,"X",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),140,"X",false);
 					EstablecerNuevaPosicion("pfH");
 					Scoring(1000);
 				}
 				else if(lblPosicion.getText().equals("pfH")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-103,"y",false);
 					EstablecerNuevaPosicion("pfI");
 					Scoring(1000);
 				}
 				else if(lblPosicion.getText().equals("pfI")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),200,"X",false);
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),73,"X",false);
 					EstablecerNuevaPosicion("pfJ");
 					Scoring(1000);
-					btnContinuar.setDisable(false);
 				}
+				else if(lblPosicion.getText().equals("pfJ")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),57,"Y",false);
+					EstablecerNuevaPosicion("pfM");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfM")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),65,"X",false);
+					EstablecerNuevaPosicion("pfP");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfP")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-65,"Y",false);
+					EstablecerNuevaPosicion("pfQ");
+					Scoring(1000);
+				}
+				else if(lblPosicion.getText().equals("pfQ")) {
+					utilidades.TraslacionImagen(myImage,Duration.millis(2000),63,"X",false);
+					EstablecerNuevaPosicion("pfR");
+					btnContinuar.setDisable(false);
+					Scoring(1000);
+				}
+
 				txtCodigo.setText("");
 				txtCodigo2.setText("");
 				txtCodigo3.setText("");
