@@ -9,6 +9,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene8Controller">
    <children>
+      <ImageView fitHeight="349.0" fitWidth="354.0" layoutX="167.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LabyrinthLevel7.png" />
+         </image>
+      </ImageView>
       <ImageView fx:id="myImage" fitHeight="53.0" fitWidth="30.0" layoutX="117.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@robot.png" />
@@ -30,11 +35,6 @@
       <ImageView fitHeight="17.0" fitWidth="133.0" layoutX="293.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@RoboshiftLogo.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="349.0" fitWidth="354.0" layoutX="167.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@LabyrinthLevel7.png" />
          </image>
       </ImageView>
       <Label layoutX="198.0" layoutY="224.0" text="pfA" />

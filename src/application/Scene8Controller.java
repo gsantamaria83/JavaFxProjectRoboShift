@@ -146,8 +146,6 @@ public class Scene8Controller implements Initializable {
 			Scoring(-100);
 			return result;
 		}
-		
-		
 		return result;
 	}
 	
@@ -162,15 +160,12 @@ public class Scene8Controller implements Initializable {
 			String user = lblUser.getText();
 			loader = new FXMLLoader(getClass().getResource("Scene9.fxml"));
 			root = loader.load();
-<<<<<<< HEAD
 			Scene9Controller sceneController = loader.getController();
 			sceneController.lblScore.setText(score);
 			sceneController.lblUser.setText(user);
-=======
 			Scene9Controller scene9Controller = loader.getController();
 			scene9Controller.lblScore.setText(score);
 			scene9Controller.lblUser.setText(user);
->>>>>>> ed13bd869c1cfd0630ce1d2f9ee4a8036dc51e79
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
