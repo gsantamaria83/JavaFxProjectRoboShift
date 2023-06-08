@@ -70,7 +70,7 @@ public class SceneUserController implements Initializable {
 			stage.show();
 		}
 		else if(user.equals("movacomplishlevel8")) {
-			loader = new FXMLLoader(getClass().getResource("Scene8.fxml"));
+			loader = new FXMLLoader(getClass().getResource("Scene9.fxml"));
 			root = loader.load();
 			Scene9Controller scene9Controller = loader.getController();
 			scene9Controller.lblUser.setText(user);

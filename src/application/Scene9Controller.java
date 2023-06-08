@@ -1,5 +1,4 @@
 package application;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,141 +44,120 @@ public class Scene9Controller implements Initializable {
 	Label lblPosicion;
 	@FXML
 	Label lblUser;
-	
 	//Metodo de inicializacion del controlador para el archivo FXML
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		
 		btnContinuar.setDisable(true);
 		EstablecerNuevaPosicion("Inicial");
+		
 	}
 	
 	public void EstablecerNuevaPosicion(String texto) {
 		lblPosicion.setText(texto);
 	}
 	
-	//Validacion posterior del codigo ejecutado por el usuario, si esta correctamente creado
-	public String ValidarLineasCodigo(String textoCodigo1,String textoCodigo2, String textoCodigo3) {
-		String validacionCodigo2 = txtCodigo2.getText();
-		String validacionCodigo3 = txtCodigo3.getText();
-		String mensaje = "";
-		
-		if(validacionCodigo2 == "straight") {
-			mensaje = "Verifica el desplazamiento en tu codigo para la posicion";
-			Scoring(-100);
-		}
-		
-		if(validacionCodigo3 == "pfA") {
-			mensaje = "Verifica la posicion a la que te estas desplazando";
-			Scoring(-100);
-		}
-		
-		return mensaje;
-	}
 	//Validacion inicial del codigo ejecutado por el usuario, si esta correctamente creado
-	public String ValidarCodigoGeneral2(String texto1, String texto2, String texto3) {
+	public void ValidarCodigoGeneral2(String texto1, String texto2, String texto3) {
+		Utilities utilidades = new Utilities();
 		String result = "";
-		if(texto1 == "" && texto2 == "" && texto3 == "") {
-			result = "Error: Codigo no tiene la cantidad correcta de comandos";
+		if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfA") && lblPosicion.getText().equals("Inicial"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),135,"Y",false);EstablecerNuevaPosicion("pfA");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfB") && lblPosicion.getText().equals("pfA"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfB");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfH") && lblPosicion.getText().equals("pfB"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfH");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfC") && lblPosicion.getText().equals("pfB"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-45,"Y",false);EstablecerNuevaPosicion("pfC");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfD") && lblPosicion.getText().equals("pfC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfD");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfH") && lblPosicion.getText().equals("pfC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"Y",false);EstablecerNuevaPosicion("pfH");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfB") && lblPosicion.getText().equals("pfC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfB");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfC") && lblPosicion.getText().equals("pfH"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"Y",false);EstablecerNuevaPosicion("pfC");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfE") && lblPosicion.getText().equals("pfD"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-45,"Y",false);EstablecerNuevaPosicion("pfE");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfF") && lblPosicion.getText().equals("pfE"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfF");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfI") && lblPosicion.getText().equals("pfH"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfI");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfG") && lblPosicion.getText().equals("pfH"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfG");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfJ") && lblPosicion.getText().equals("pfG"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfJ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfI") && lblPosicion.getText().equals("pfG"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);EstablecerNuevaPosicion("pfI");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfK") && lblPosicion.getText().equals("pfJ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfK");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfO") && lblPosicion.getText().equals("pfK"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),45,"Y",false);EstablecerNuevaPosicion("pfO");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfK") && lblPosicion.getText().equals("pfO"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfK");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfJ") && lblPosicion.getText().equals("pfK"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfJ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfN") && lblPosicion.getText().equals("pfO"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfN");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfP") && lblPosicion.getText().equals("pfN"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),200,"X",false);EstablecerNuevaPosicion("pfP");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfO") && lblPosicion.getText().equals("pfP"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfO");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfN") && lblPosicion.getText().equals("pfP"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-100,"X",false);EstablecerNuevaPosicion("pfN");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfG") && lblPosicion.getText().equals("pfJ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-45,"Y",false);EstablecerNuevaPosicion("pfG");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfH") && lblPosicion.getText().equals("pfG"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfH");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfI") && lblPosicion.getText().equals("pfH"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfI");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfW") && lblPosicion.getText().equals("pfI"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfW");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfL") && lblPosicion.getText().equals("pfW"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"Y",false);EstablecerNuevaPosicion("pfL");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfL") && lblPosicion.getText().equals("pfI"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfL");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfX") && lblPosicion.getText().equals("pfW"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfX");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfM") && lblPosicion.getText().equals("pfL"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfM");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfL") && lblPosicion.getText().equals("pfM"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfL");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfI") && lblPosicion.getText().equals("pfL"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfI");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfQ") && lblPosicion.getText().equals("pfM"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfQ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfS") && lblPosicion.getText().equals("pfQ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),95,"X",false);EstablecerNuevaPosicion("pfS");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfQ") && lblPosicion.getText().equals("pfS"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"Y",false);EstablecerNuevaPosicion("pfQ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfM") && lblPosicion.getText().equals("pfQ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfM");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfT") && lblPosicion.getText().equals("pfS"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfT");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfS") && lblPosicion.getText().equals("pfT"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfS");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfU") && lblPosicion.getText().equals("pfT"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),45,"X",false);EstablecerNuevaPosicion("pfU");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfT") && lblPosicion.getText().equals("pfU"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfT");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfV") && lblPosicion.getText().equals("pfU"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pfV");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfU") && lblPosicion.getText().equals("pfV"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfU");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfW") && lblPosicion.getText().equals("pfX"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfW");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfY") && lblPosicion.getText().equals("pfX"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-45,"Y",false);EstablecerNuevaPosicion("pfY");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfZ") && lblPosicion.getText().equals("pfY"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfZ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfY") && lblPosicion.getText().equals("pfZ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfY");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pgC") && lblPosicion.getText().equals("pfZ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pgC");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfZ") && lblPosicion.getText().equals("pgC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfZ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfY") && lblPosicion.getText().equals("pgC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"X",false);EstablecerNuevaPosicion("pfY");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pgC") && lblPosicion.getText().equals("pfY"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),95,"X",false);EstablecerNuevaPosicion("pgC");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pgD") && lblPosicion.getText().equals("pgC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-45,"Y",false);EstablecerNuevaPosicion("pgD");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pgF") && lblPosicion.getText().equals("pgD"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-100,"X",false);EstablecerNuevaPosicion("pgF");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pgD") && lblPosicion.getText().equals("pgF"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);EstablecerNuevaPosicion("pgD");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pgC") && lblPosicion.getText().equals("pgD"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pgC");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pgE") && lblPosicion.getText().equals("pgC"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"Y",false);EstablecerNuevaPosicion("pgE");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pgC") && lblPosicion.getText().equals("pgE"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"Y",false);EstablecerNuevaPosicion("pgC");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pgH") && lblPosicion.getText().equals("pgE"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),45,"X",false);EstablecerNuevaPosicion("pgH");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pgI") && lblPosicion.getText().equals("pgH"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-140,"Y",false);EstablecerNuevaPosicion("pgI");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pgJ") && lblPosicion.getText().equals("pgI"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pgJ");Scoring(2000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfR") && lblPosicion.getText().equals("pfZ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"Y",false);EstablecerNuevaPosicion("pfR");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfZ") && lblPosicion.getText().equals("pfR"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-100,"Y",false);EstablecerNuevaPosicion("pfZ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pgB") && lblPosicion.getText().equals("pfR"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);EstablecerNuevaPosicion("pgB");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfR") && lblPosicion.getText().equals("pgB"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"Y",false);EstablecerNuevaPosicion("pfR");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pgA") && lblPosicion.getText().equals("pfR"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pgA");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfR") && lblPosicion.getText().equals("pgA"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfR");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfE") && lblPosicion.getText().equals("pfF"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfE");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfD") && lblPosicion.getText().equals("pfE"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),45,"Y",false);EstablecerNuevaPosicion("pfD");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfC") && lblPosicion.getText().equals("pfD"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-50,"X",false);EstablecerNuevaPosicion("pfC");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfP") && lblPosicion.getText().equals("pfO"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfP");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("straight") && texto3.equals("pfO") && lblPosicion.getText().equals("pfN"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"X",false);EstablecerNuevaPosicion("pfO");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("forward") && texto3.equals("pfQ") && lblPosicion.getText().equals("pfS"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-95,"X",false);EstablecerNuevaPosicion("pfQ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfW") && lblPosicion.getText().equals("pfJ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"Y",false);EstablecerNuevaPosicion("pfW");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfW") && lblPosicion.getText().equals("pfL"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-100,"Y",false);EstablecerNuevaPosicion("pfW");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pfX") && lblPosicion.getText().equals("pfY"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),45,"Y",false);EstablecerNuevaPosicion("pfX");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pgE") && lblPosicion.getText().equals("pgD"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"Y",false);EstablecerNuevaPosicion("pgE");Scoring(1000); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("left") && texto3.equals("pfZ") && lblPosicion.getText().equals("pgB"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),-140,"Y",false);EstablecerNuevaPosicion("pfZ");Scoring(0); }
+		else if( (texto1.equals("mov") && texto2.trim().equals("right") && texto3.equals("pgB") && lblPosicion.getText().equals("pfZ"))) { utilidades.TraslacionImagen(myImage,Duration.millis(2000),140,"Y",false);EstablecerNuevaPosicion("pgB");Scoring(0); }
+		else
+		{
 			Scoring(-100);
-			return result;
+			result = "Ha ocurrido un error en tu codigo. Por favor revisa";
 		}
-		if(!texto1.trim().equals("mov") ) {
-			result = "Error: Verifica que la primera instruccion empieza con mov. Escribiste " + texto1;
-			Scoring(-100);
-			return result;
+		if(result.equals("")) {
+			result = "Codigo ejecutado correctamente !!!";
 		}
-		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("Inicial"))|(!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfA"))| (!texto2.trim().equals("left") && lblPosicion.getText().equals("pfB")) ) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
-			Scoring(-100);
-			return result;
+		txtCodigo.setText("");
+		txtCodigo2.setText("");
+		txtCodigo3.setText("");
+		
+		if(lblPosicion.getText().equals("pgJ")) {
+			lblMensaje.setText("Has terminado correctamente las ejecuciones de codigo !!!");
+			btnContinuar.setDisable(false);
 		}
-		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfC"))|(!texto2.trim().equals("right") && lblPosicion.getText().equals("pfD"))| (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfE")) ) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
-			Scoring(-100);
-			return result;
+		else {
+			lblMensaje.setText(result);
 		}
-		if( (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfF"))|(!texto2.trim().equals("forward") && lblPosicion.getText().equals("pfG"))| (!texto2.trim().equals("right") && lblPosicion.getText().equals("pfH")) ) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
-			Scoring(-100);
-			return result;
-		}
-		if( (!texto2.trim().equals("straight") && lblPosicion.getText().equals("pfI"))) {
-			result = "Error: Verifica la direccion del robot. Has escrito " + texto2;
-			Scoring(-100);
-			return result;
-		}
-		if((!texto3.trim().equals("pfA") && lblPosicion.getText().equals("Inicial")) | (!texto3.trim().equals("pfB") && lblPosicion.getText().equals("pfA")) | (!texto3.trim().equals("pfC") && lblPosicion.getText().equals("pfB")) ) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if((!texto3.trim().equals("pfC") && lblPosicion.getText().equals("pfB")) | (!texto3.trim().equals("pfD") && lblPosicion.getText().equals("pfC")) | (!texto3.trim().equals("pfE") && lblPosicion.getText().equals("pfD")) ) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if((!texto3.trim().equals("pfF") && lblPosicion.getText().equals("pfE")) | (!texto3.trim().equals("pfG") && lblPosicion.getText().equals("pfF")) | (!texto3.trim().equals("pfH") && lblPosicion.getText().equals("pfG")) ) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if((!texto3.trim().equals("pfI") && lblPosicion.getText().equals("pfH")) | (!texto3.trim().equals("pfJ") && lblPosicion.getText().equals("pfI"))) {
-			result = "Error: Verifica la posicion de movimiento del robot. Has escrito " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("Inicial") && !texto3.trim().equals("pfA")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfA") && !texto3.trim().equals("pfB")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfB") && !texto3.trim().equals("pfC")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfC") && !texto3.trim().equals("pfD")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfD") && !texto3.trim().equals("pfE")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfE") && !texto3.trim().equals("pfF")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfF") && !texto3.trim().equals("pfG")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfG") && !texto3.trim().equals("pfH")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfH") && !texto3.trim().equals("pfI")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		if(lblPosicion.getText().equals("pfI") && !texto3.trim().equals("pfJ")) {
-			result = "Error: No puedes pasar de la posicion " + lblPosicion.getText() + "hacia la posicion " + texto3;
-			Scoring(-100);
-			return result;
-		}
-		return result;
 	}
 	
 	//Metodo para generar el puntaje de la solución de codigo
@@ -204,81 +182,6 @@ public class Scene9Controller implements Initializable {
 	
 	//Metodo general de validacion del codigo ejecutado por el usuario
 	public void ValidarCodigo(ActionEvent event) throws IOException{
-		Utilities utilidades = new Utilities();	
-		String mensaje = ValidarCodigoGeneral2(txtCodigo.getText(),txtCodigo2.getText(),txtCodigo3.getText());
-		if(mensaje.trim() != "") {
-			lblMensaje.setText(mensaje);
-			txtCodigo.setText("");
-			txtCodigo2.setText("");
-			txtCodigo3.setText("");
-		}
-		else {
-			mensaje = ValidarLineasCodigo(txtCodigo.getText(),txtCodigo2.getText(),txtCodigo3.getText());
-			if(mensaje.trim() != "") {
-				lblMensaje.setText(mensaje);
-				txtCodigo.setText("");
-				txtCodigo2.setText("");
-				txtCodigo3.setText("");
-			}
-			else {
-				
-				lblMensaje.setText("Codigo ejecutado correctamente !!!");
-				if(lblPosicion.getText().equals("Inicial")) {
-					EstablecerNuevaPosicion("pfA");
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),148,"Y",false);
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfA")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);
-					EstablecerNuevaPosicion("pfB");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfB")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-200,"Y",false);
-					EstablecerNuevaPosicion("pfC");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfC")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),100,"X",false);
-					EstablecerNuevaPosicion("pfD");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfD")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),70,"Y",false);
-					EstablecerNuevaPosicion("pfE");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfE")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),150,"X",false);
-					EstablecerNuevaPosicion("pfF");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfF")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),70,"Y",false);
-					EstablecerNuevaPosicion("pfG");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfG")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),-160,"X",false);
-					EstablecerNuevaPosicion("pfH");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfH")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),50,"Y",false);
-					EstablecerNuevaPosicion("pfI");
-					Scoring(1000);
-				}
-				else if(lblPosicion.getText().equals("pfI")) {
-					utilidades.TraslacionImagen(myImage,Duration.millis(2000),200,"X",false);
-					EstablecerNuevaPosicion("pfJ");
-					Scoring(1000);
-					btnContinuar.setDisable(false);
-				}
-				txtCodigo.setText("");
-				txtCodigo2.setText("");
-				txtCodigo3.setText("");
-			}
-			
-		}
+		ValidarCodigoGeneral2(txtCodigo.getText(),txtCodigo2.getText(),txtCodigo3.getText());
 	}
 }

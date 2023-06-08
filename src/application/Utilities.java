@@ -1,7 +1,6 @@
 package application;
 
 import java.io.IOException;
-
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -111,5 +110,4 @@ public class Utilities {
 		stage.setScene(scene);
 		stage.show();
 	}
-
 }
