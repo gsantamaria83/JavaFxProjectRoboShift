@@ -89,52 +89,52 @@ public class Scene8Controller implements Initializable {
 			Scoring(-100);
 			return result;
 		}
-		if( (lblPosicion.getText().equals("Inicial")) && !texto2.trim().equals("straight") || !texto3.trim().equals("pfA") ) {
+		if( lblPosicion.getText().equals("Inicial") && (!texto2.trim().equals("straight") || !texto3.trim().equals("pfA"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
 			
 		}
-		if( (lblPosicion.getText().equals("pfA")) && !texto2.trim().equals("right") || !texto3.trim().equals("pfG") ) {
+		if( lblPosicion.getText().equals("pfA") && (!texto2.trim().equals("right") || !texto3.trim().equals("pfG"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
 		}
 		
-		if( (lblPosicion.getText().equals("pfG")) && !texto2.trim().equals("straight") || !texto3.trim().equals("pfH") ) {
+		if( lblPosicion.getText().equals("pfG") && (!texto2.trim().equals("straight") || !texto3.trim().equals("pfH"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
 		}
 		
-		if( (lblPosicion.getText().equals("pfH")) && !texto2.trim().equals("left") || !texto3.trim().equals("pfI") ) {
-			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
-			Scoring(-100);
-			return result;
-		}
-		
-		
-		if( (lblPosicion.getText().equals("pfI")) && !texto2.trim().equals("straight") || !texto3.trim().equals("pfJ") ) {
+		if( lblPosicion.getText().equals("pfH") && (!texto2.trim().equals("left") || !texto3.trim().equals("pfI"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
 		}
 		
 		
-		if( (lblPosicion.getText().equals("pfJ")) && !texto2.trim().equals("right") || !texto3.trim().equals("pfM") ) {
+		if( lblPosicion.getText().equals("pfI") && (!texto2.trim().equals("straight") || !texto3.trim().equals("pfJ"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
 		}
 		
 		
-		if( (lblPosicion.getText().equals("pfM")) && !texto2.trim().equals("straight") || !texto3.trim().equals("pfP") ) {
+		if( lblPosicion.getText().equals("pfJ") && (!texto2.trim().equals("right") || !texto3.trim().equals("pfM"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
 		}
 		
-		if( (lblPosicion.getText().equals("pfP")) && !texto2.trim().equals("left") || !texto3.trim().equals("pfQ") ) {
+		
+		if( lblPosicion.getText().equals("pfM") && (!texto2.trim().equals("straight") || !texto3.trim().equals("pfP"))) {
+			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
+			Scoring(-100);
+			return result;
+		}
+		
+		if( lblPosicion.getText().equals("pfP") && (!texto2.trim().equals("left") || !texto3.trim().equals("pfQ"))) {
 			result = "Error: Verifica la direccion del robot. " + texto1 + "-" + texto2 + "-" + texto3;
 			Scoring(-100);
 			return result;
