@@ -167,13 +167,7 @@ public class Scene9Controller implements Initializable {
 		}
 	
 		public void SwitchScene(ActionEvent event)throws IOException{
-			String score = lblScore.getText();
-			String user = lblUser.getText();
-			loader = new FXMLLoader(getClass().getResource("Scene9.fxml"));
-			root = loader.load();
-			Scene9Controller scene9Controller = loader.getController();
-			scene9Controller.lblScore.setText(score);
-			scene9Controller.lblUser.setText(user);
+			root = FXMLLoader.load(getClass().getResource("SceneCredits.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);

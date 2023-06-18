@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneCreditsController">
+   <children>
+      <Button layoutX="342.0" layoutY="478.0" mnemonicParsing="false" onAction="#SwitchScene" text="Salir" />
+      <ImageView fitHeight="17.0" fitWidth="133.0" layoutX="540.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@RoboshiftLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="317.0" fitWidth="531.0" layoutX="78.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ImgCredits.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
